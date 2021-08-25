@@ -37,6 +37,14 @@
          <EntityContainer Name="Z_LROP_EX_SRVEntities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
             <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
             <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:searchable="true" sap:content-version="1" />
+
+            <FunctionImport Name="ProcessHeader" ReturnType="Z_LROP_EX_SRV.HeaderType" EntitySet="HeaderSet" m:HttpMethod="POST"
+               sap:action-for="Z_LROP_EX_SRV.HeaderType" 
+               sap:applicable-path="Boolean">
+               <Parameter Name="Guid" Type="Edm.Guid" Mode="In"/>
+               <Parameter Name="Decimal" Type="Edm.Decimal" Mode="In" MaxLength="10"/>
+            </FunctionImport>
+
          </EntityContainer>
       </Schema>
    </edmx:DataServices>
