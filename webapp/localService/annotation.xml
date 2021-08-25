@@ -32,9 +32,36 @@
 				</Annotation>
 
 
+				<Annotation Term="UI.DataPoint" Qualifier="Rating">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="Criticality"/>
+						<PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Rating"/>
+						<PropertyValue Property="TargetValue" Decimal="5"/>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.DataPoint" Qualifier="Progress">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Value" Path="Progress"/>
+						<PropertyValue Property="Visualization" EnumMember="UI.VisualizationType/Progress"/>
+						<PropertyValue Property="TargetValue" Decimal="100"/>
+						<PropertyValue Property="Criticality" Path="Criticality"/>
+					</Record>
+				</Annotation>
+
 				<Annotation Term="UI.LineItem">
 					<Annotation Term="UI.Criticality" Path="Criticality"/>
 					<Collection>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Label" String="{@i18n>rating}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Rating"/>
+						</Record>
+
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Label" String="{@i18n>progress}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Progress"/>
+						</Record>
+
 						<Record Type="UI.DataFieldForIntentBasedNavigation">
 							<PropertyValue Property="SemanticObject" String="Z_OVP_EX"/>
 							<PropertyValue Property="Action" String="display"/>

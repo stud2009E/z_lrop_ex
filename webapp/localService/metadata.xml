@@ -18,6 +18,7 @@
             <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
             <Property Name="Byte" Type="Edm.Byte"  Nullable="false" sap:label="Byte"/>
             <Property Name="Criticality" Type="Edm.Int16"  Nullable="false" sap:label="Criticality"/>
+            <Property Name="Progress" Type="Edm.Decimal"  Nullable="false" sap:label="Criticality"/>
          </EntityType>
 
          <EntityType Name="FileType" sap:label="files props">
