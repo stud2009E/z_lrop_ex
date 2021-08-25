@@ -6,11 +6,11 @@
 		"Boolean": false,
 		"Int16": 399,
 		"Int32": 983,
-		"Date": "/Date(1598881925509)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 1,
-		"Progress": "75"
+		"Progress": 75
 	},
 	{
 		"Guid": "ecd40596-33eb-4192-b6f1-8a3ce393369a",
@@ -19,11 +19,11 @@
 		"Boolean": true,
 		"Int16": 314,
 		"Int32": 797,
-		"Date": "/Date(1598881925513)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 2,
-		"Progress": "20"
+		"Progress": 20
 	},
 	{
 		"Guid": "99739da1-0057-420c-83c7-b16abaf6bd89",
@@ -32,11 +32,11 @@
 		"Boolean": false,
 		"Int16": 370,
 		"Int32": 809,
-		"Date": "/Date(1598881925516)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 3,
-		"Progress": "10"
+		"Progress": 10
 	},
 	{
 		"Guid": "421bf79f-945c-477a-a47e-57f3a7ace4b7",
@@ -45,11 +45,11 @@
 		"Boolean": true,
 		"Int16": 551,
 		"Int32": 884,
-		"Date": "/Date(1598881925526)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 7,
 		"Criticality": 3,
-		"Progress": "30"
+		"Progress": 30
 	},
 	{
 		"Guid": "6874dfde-fecd-4f72-b857-9b29df14463a",
@@ -58,11 +58,11 @@
 		"Boolean": false,
 		"Int16": 935,
 		"Int32": 834,
-		"Date": "/Date(1598881925529)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 3,
-		"Progress": "80"
+		"Progress": 80
 	},
 	{
 		"Guid": "96c4d8ef-9491-471b-8b4f-8dab98ae64da",
@@ -71,11 +71,11 @@
 		"Boolean": false,
 		"Int16": 408,
 		"Int32": 118,
-		"Date": "/Date(1598881925535)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 0,
-		"Progress": "65"
+		"Progress": 65
 	},
 	{
 		"Guid": "56d1ba1d-2135-4155-9b1a-263d01d3cc2f",
@@ -84,11 +84,11 @@
 		"Boolean": true,
 		"Int16": 30,
 		"Int32": 327,
-		"Date": "/Date(1598881925538)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 1,
-		"Progress": "80"
+		"Progress": 80
 	},
 	{
 		"Guid": "f982162a-f1c0-4def-8a3f-f0d5842e56dd",
@@ -97,11 +97,11 @@
 		"Boolean": false,
 		"Int16": 881,
 		"Int32": 749,
-		"Date": "/Date(1598881925541)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 7,
 		"Criticality": 2,
-		"Progress": "99"
+		"Progress": 99
 	},
 	{
 		"Guid": "279c03d2-0dc1-443c-b097-e9193440e7be",
@@ -110,11 +110,11 @@
 		"Boolean": false,
 		"Int16": 653,
 		"Int32": 573,
-		"Date": "/Date(1598881925546)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 3,
-		"Progress": "60"
+		"Progress": 60
 	},
 	{
 		"Guid": "9b21a764-5169-477f-87cb-9dbf84040b97",
@@ -123,10 +123,10 @@
 		"Boolean": true,
 		"Int16": 338,
 		"Int32": 137,
-		"Date": "/Date(1598881925550)/",
+		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 3,
-		"Progress": "35"
+		"Progress": 35
 	}
 ]

@@ -34,11 +34,27 @@
             <Property Name="MimeType" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="MimeType"/>
             <Property Name="Date" Type="Edm.DateTime"  Nullable="false" sap:display-format="Date" sap:label="Date"/>
             <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
-         </EntityType>
+         </EntityType> 
+
+         <EntityType Name="AnayticalType" sap:label="analytical data" sap:semantics="aggregate">
+            <Key>
+               <PropertyRef Name="Id"/>
+            </Key>
+            <Property Name="Id" Type="Edm.String" MaxLength="10" Nullable="false" sap:label="Id"/>
+            <Property Name="Name" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="Name"/>
+
+            <Property Name="DimensionA" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="DimensionA" sap:aggregation-role="dimension"/>
+            <Property Name="DimensionB" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="DimensionB" sap:aggregation-role="dimension"/>
+            
+            <Property Name="MeasureA" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:label="MeasureA" sap:aggregation-role="measure"/>
+            <Property Name="MeasureB" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:label="MeasureB" sap:aggregation-role="measure"/>
+            <Property Name="MeasureC" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:label="MeasureC" sap:aggregation-role="measure"/>
+         </EntityType> 
 
          <EntityContainer Name="Z_LROP_EX_SRVEntities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
             <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
-            <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:searchable="true" sap:content-version="1" />
+            <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:content-version="1" />
+            <EntitySet Name="AnalyticalSet" EntityType="Z_LROP_EX_SRV.AnayticalType" sap:label="Analytical data" sap:content-version="1" />
 
             <FunctionImport Name="ProcessHeader" ReturnType="Z_LROP_EX_SRV.HeaderType" EntitySet="HeaderSet" m:HttpMethod="POST"
                sap:action-for="Z_LROP_EX_SRV.HeaderType" 

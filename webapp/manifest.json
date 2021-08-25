@@ -179,7 +179,7 @@
 						"enableTableFilterInPageVariant": true,
 
 						"tableSettings": {
-							"type": "GridTable",
+							"type": "AnalyticalTable",
 							"multiSelect": true
 						},
 
@@ -194,8 +194,17 @@
 								"file": {
 									"key": "file",
 									"entitySet": "FileSet",
-									"title": "{{appDescription}}",
 									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+								},
+								"analytical": {
+									"key": "analytical",
+									"entitySet": "AnalyticalSet",
+									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+								},
+								"chart": {
+									"key": "Chart",
+									"entitySet": "AnalyticalSet",
+									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#chart"
 								}
 							}
 						}

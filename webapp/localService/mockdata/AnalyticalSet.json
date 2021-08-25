@@ -1,0 +1,99 @@
+[
+	{
+		"Id":"01",
+		"Name": "Cillum sint cupidatat officia eiusmod in consequat.",
+		"DimensionA": "A",
+		"DimensionB": "XX",
+		"MeasureA": 10.23,
+		"MeasureB": 20.5,
+		"MeasureC": 30.345
+	},{
+		"Id":"02",
+		"Name": "Ex ea eiusmod fugiat ut amet et nostrud adipisicing occaecat enim exercitation amet dolore.",
+		"DimensionA": "B",
+		"DimensionB": "YY",
+		"MeasureA": 100.23,
+		"MeasureB": 520.5,
+		"MeasureC": 470.345
+	},{
+		"Id":"03",
+		"Name": "Irure aliquip elit labore magna nisi mollit ut aliqua est nisi consequat enim esse ex.",
+		"DimensionA": "C",
+		"DimensionB": "ZZ",
+		"MeasureA": 60.23,
+		"MeasureB": 202.5,
+		"MeasureC": 330.345
+	},{
+		"Id":"04",
+		"Name": "Nostrud incididunt nisi deserunt aute commodo fugiat amet laborum velit aliqua.",
+		"DimensionA": "D",
+		"DimensionB": "ZZ",
+		"MeasureA": 10.23,
+		"MeasureB": 201.5,
+		"MeasureC": 430.345
+	},{
+		"Id":"05",
+		"Name": "Exercitation minim deserunt anim ut nostrud aliquip ad.",
+		"DimensionA": "D",
+		"DimensionB": "XX",
+		"MeasureA": 150.23,
+		"MeasureB": 20.5,
+		"MeasureC": 230.345
+	},{
+		"Id":"06",
+		"Name": "Fugiat ipsum sunt Lorem et mollit est elit excepteur.",
+		"DimensionA": "A",
+		"DimensionB": "YY",
+		"MeasureA": 120.23,
+		"MeasureB": 320.5,
+		"MeasureC": 350.345
+	},{
+		"Id":"07",
+		"Name": "Quis commodo sint in aliquip sunt esse exercitation do consectetur fugiat officia pariatur anim nulla.",
+		"DimensionA": "C",
+		"DimensionB": "YY",
+		"MeasureA": 102.23,
+		"MeasureB": 120.5,
+		"MeasureC": 340.345
+	},{
+		"Id":"08",
+		"Name": "Labore veniam veniam ut officia sit cupidatat nisi.",
+		"DimensionA": "A",
+		"DimensionB": "ZZ",
+		"MeasureA": 180.23,
+		"MeasureB": 20.05,
+		"MeasureC": 302.345
+	},{
+		"Id":"09",
+		"Name": "Veniam minim cillum mollit ad ea ullamco.",
+		"DimensionA": "A",
+		"DimensionB": "XX",
+		"MeasureA": 104.23,
+		"MeasureB": 204.5,
+		"MeasureC": 305.345
+	},{
+		"Id":"10",
+		"Name": "Ut excepteur minim ea irure excepteur sint qui ex eu officia minim eu occaecat.",
+		"DimensionA": "A",
+		"DimensionB": "ZZ",
+		"MeasureA": 40.23,
+		"MeasureB": 60.5,
+		"MeasureC": 770.345
+	},{
+		"Id":"11",
+		"Name": "Proident elit sunt sint anim sit est dolor ipsum dolore quis commodo velit.",
+		"DimensionA": "D",
+		"DimensionB": "YY",
+		"MeasureA": 10.23,
+		"MeasureB": 20.5,
+		"MeasureC": 30.345
+	},{
+		"Id":"12",
+		"Name": "Ipsum veniam veniam tempor id laborum eiusmod id aute commodo occaecat velit veniam laboris.",
+		"DimensionA": "C",
+		"DimensionB": "XX",
+		"MeasureA": 102.23,
+		"MeasureB": 250.5,
+		"MeasureC": 307.345
+	}
+]

@@ -31,6 +31,13 @@
 					</Record>
 				</Annotation>
 
+				<Annotation Term="Common.SemanticKey" >
+					<Collection>
+						<PropertyPath>Guid</PropertyPath>
+						<PropertyPath>Int32</PropertyPath>
+					</Collection>
+				</Annotation>
+
 
 				<Annotation Term="UI.DataPoint" Qualifier="Rating">
 					<Record Type="UI.DataPointType">
@@ -106,6 +113,7 @@
 						</Record>
 
 						<Record Type="UI.DataField">
+							<PropertyValue Property="Criticality" Path="Criticality"/>
 							<PropertyValue Property="Value" Path="Guid"/>
 						</Record>
 						<Record Type="UI.DataField">
@@ -233,7 +241,6 @@
 				<Annotation Term="UI.PresentationVariant">
 					<Record Type="UI.PresentationVariantType">
 						<PropertyValue Property="ID" String="filePV"/>
-						<PropertyValue Property="Text" String="{@i18n>filePVText}"/>
 						<PropertyValue Property="Visualizations">
 							<Collection>
 								<AnnotationPath>@UI.LineItem#file</AnnotationPath>
@@ -245,7 +252,69 @@
 				<Annotation Term="UI.SelectionVariant" >
 					<Record Type="UI.SelectionVariantType">
 						<PropertyValue Property="ID" String="fileSV"/>
-						<PropertyValue Property="Text" String="{@i18n>filePVText}"/>
+						<PropertyValue Property="Text" String="{@i18n>fileSVText}"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+			<Annotations Target="Metadata.AnayticalType">
+				
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DimensionB"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="MeasureA"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="MeasureB"/>
+						</Record>
+					</Collection>
+				</Annotation>
+
+				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="chart">
+					<Record Type="UI.SelectionPresentationVariantType">
+						<PropertyValue Property="Text" String="{@i18n>chartSPVText}"/>
+						<PropertyValue Property="SelectionVariant">
+							<Record Type="UI.SelectionVariantType">
+								<PropertyValue Property="ID" String="chart"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="PresentationVariant">
+							<Record Type="UI.PresentationVariantType">
+								<PropertyValue Property="Visualizations">
+									<Collection>
+										<AnnotationPath>@UI.Chart</AnnotationPath>
+									</Collection>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.Chart" >
+					<Record Type="UI.ChartDefinitionType">
+						<PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line"/>
+						<PropertyValue Property="Dimensions">
+							<Collection>
+								<PropertyPath>DimensionA</PropertyPath>
+								<PropertyPath>DimensionB</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Measures">
+							<Collection>
+								<PropertyPath>MeasureA</PropertyPath>
+								<PropertyPath>MeasureB</PropertyPath>
+								<PropertyPath>MeasureC</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.SelectionVariant" >
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="{@i18n>analyticalSVText}"/>
 					</Record>
 				</Annotation>
 			</Annotations>
