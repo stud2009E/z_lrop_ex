@@ -163,7 +163,7 @@
 			"showDraftToggle": false,
 			"objectPageHeaderType": "Dynamic",
 			"forceGlobalRefresh": false,
-			"useColumnLayoutForSmartForm": false
+			"useColumnLayoutForSmartForm": true
 		},
 		"pages": {
 			"ListReport|HeaderSet": {

@@ -211,6 +211,57 @@
 							<PropertyValue Property="ID" String="replaceFacetFG"/>
 							<PropertyValue Property="Label" String="{@i18n>labelExampleFacet}"/>
 						</Record>
+						<!-- <Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.CollectionFacet">
+										<PropertyValue Property="Label" String="{@i18n>collectionGroup}"/>
+										<PropertyValue Property="Facets">
+											<Collection>
+												<Record Type="UI.ReferenceFacet">
+													<PropertyValue Property="Label" String="{@i18n>texts}"/>
+													<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#texts"/>
+												</Record>
+												<Record Type="UI.ReferenceFacet">
+													<PropertyValue Property="Label" String="{@i18n>numbers}"/>
+													<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#numbers"/>
+												</Record>
+											</Collection>
+										</PropertyValue>
+									</Record>
+								</Collection>
+							</PropertyValue>
+						</Record> -->
+						<Record Type="UI.CollectionFacet">
+							<PropertyValue Property="Label" String="{@i18n>collectionOfCollection}"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="UI.CollectionFacet">
+										<PropertyValue Property="Label" String="{@i18n>texts}"/>
+										<PropertyValue Property="Facets">
+											<Collection>
+												<Record Type="UI.ReferenceFacet">
+													<PropertyValue Property="Label" String="{@i18n>texts}"/>
+													<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#texts"/>
+												</Record>
+											</Collection>
+										</PropertyValue>
+									</Record>
+									<Record Type="UI.CollectionFacet">
+										<PropertyValue Property="Label" String="{@i18n>numbers}"/>
+										<PropertyValue Property="Facets">
+											<Collection>
+												<Record Type="UI.ReferenceFacet">
+													<PropertyValue Property="Label" String="{@i18n>numbers}"/>
+													<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#numbers"/>
+												</Record>
+											</Collection>
+										</PropertyValue>
+									</Record>
+								</Collection>
+								
+							</PropertyValue>
+						</Record>
 					</Collection>
 				</Annotation>
 
@@ -218,6 +269,42 @@
 					<Record Type="UI.FieldGroupType">
 						<PropertyValue Property="Data">
 						<!-- exmaple facet for replace -->
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.FieldGroup" Qualifier="texts">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Guid"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="String"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.FieldGroup" Qualifier="numbers">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Int16"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Int32"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Decimal"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Byte"/>
+								</Record>
+							</Collection>
 						</PropertyValue>
 					</Record>
 				</Annotation>
