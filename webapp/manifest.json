@@ -163,7 +163,7 @@
 			"showDraftToggle": false,
 			"objectPageHeaderType": "Dynamic",
 			"forceGlobalRefresh": false,
-			"isFiori3Enabled": true
+			"useColumnLayoutForSmartForm": false
 		},
 		"pages": {
 			"ListReport|HeaderSet": {
@@ -215,7 +215,10 @@
 						"entitySet": "HeaderSet",
 						"component": {
 							"name": "sap.suite.ui.generic.template.ObjectPage",
-							"settings": {}
+							"settings": {
+								"editableHeaderContent": false,
+								"simpleHeaderFacets": false
+							}
 						}
 					}
 				}
