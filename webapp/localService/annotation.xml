@@ -69,6 +69,14 @@
 					</Record>
 				</Annotation>
 
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>Boolean</PropertyPath>
+						<PropertyPath>Decimal</PropertyPath>
+						<PropertyPath>String</PropertyPath>
+					</Collection>
+				</Annotation>
+
 				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="header">
 					<Record Type="UI.SelectionPresentationVariantType">
 						<PropertyValue Property="ID" String="headerSPV"/>
@@ -164,10 +172,22 @@
 				</Annotation>
 				<Annotation Term="Capabilities.InsertRestrictions">
 					<Record Type="Capabilities.InsertRestrictionsType">
-						<PropertyValue Property="Insertable" Bool="true"/>
+						<PropertyValue Property="Insertable" Bool="false"/>
 					</Record>
 				</Annotation>
-				
+
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record Type="Capabilities.FilterRestrictionsType">
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>Guid</PropertyPath>
+								<PropertyPath>Byte</PropertyPath>
+								<PropertyPath>Time</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
 			</Annotations>
 		</Schema>
 	</edmx:DataServices>
