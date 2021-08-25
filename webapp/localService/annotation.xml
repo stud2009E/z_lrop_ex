@@ -23,7 +23,7 @@
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
 			Namespace="annotation.Z_LROP_EX_SRV">
 			<Annotations Target="Metadata.HeaderType">
-				<Annotation Term="UI.LineItem">
+				<Annotation Term="UI.LineItem" Qualifier="header">
 					<Collection>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="Guid"/>
@@ -68,7 +68,88 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
+
+				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="header">
+					<Record Type="UI.SelectionPresentationVariantType">
+						<PropertyValue Property="ID" String="headerSPV"/>
+						<PropertyValue Property="Text" String="{@i18n>headerSPVText}"/>
+						<PropertyValue Property="SelectionVariant">
+							<Record Type="UI.SelectionVariantType">
+								<PropertyValue Property="SelectOptions">
+									<Collection>
+										<Record Type="UI.SelectOptionType">
+											<PropertyValue Property="PropertyName" PropertyPath="Boolean"/>
+											<PropertyValue Property="Ranges">
+												<Collection>
+													<Record Type="UI.SelectionRangeType">
+														<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+														<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+														<PropertyValue Property="Low" Bool="false"/>
+													</Record>
+												</Collection>
+											</PropertyValue>
+										</Record>
+									</Collection>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="PresentationVariant">
+							<Record Type="UI.PresentationVariantType">
+								<PropertyValue Property="Visualizations">
+									<Collection>
+										<AnnotationPath>@UI.LineItem#header</AnnotationPath>
+									</Collection>
+								</PropertyValue>
+								<PropertyValue Property="SortOrder">
+									<Collection>
+										<Record Type="Common.SortOrderType">
+											<PropertyValue Property="Property" PropertyPath="Int16"/>
+											<PropertyValue Property="Descending" Bool="false"/>
+										</Record>
+									</Collection>
+								</PropertyValue>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
 			</Annotations>
+
+			<Annotations Target="Metadata.FileType">
+				<Annotation Term="UI.LineItem" Qualifier="file">
+					
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="FileName"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="FileSize"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="UserName"/>
+						</Record>
+					</Collection>
+				</Annotation>
+
+				<Annotation Term="UI.PresentationVariant">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="ID" String="filePV"/>
+						<PropertyValue Property="Text" String="{@i18n>filePVText}"/>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.LineItem#file</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.SelectionVariant" >
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="ID" String="fileSV"/>
+						<PropertyValue Property="Text" String="{@i18n>filePVText}"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+
 
 			<Annotations Target="Metadata.Z_LROP_EX_SRVEntities/HeaderSet">
 				<Annotation Term="Capabilities.DeleteRestrictions">
@@ -86,6 +167,7 @@
 						<PropertyValue Property="Insertable" Bool="true"/>
 					</Record>
 				</Annotation>
+				
 			</Annotations>
 		</Schema>
 	</edmx:DataServices>

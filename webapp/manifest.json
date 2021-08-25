@@ -172,12 +172,30 @@
 					"name": "sap.suite.ui.generic.template.ListReport",
 					"list": true,
 					"settings": {
-						"isFiori3Enabled": true,
 						"multiSelect": true,
 						"gridTable": true,
+						"condensedTableLayout":true,
+						
 						"smartVariantManagement": true,
 						"variantManagementHidden": false,
-						"enableTableFilterInPageVariant": false
+						"enableTableFilterInPageVariant": true,
+
+						"quickVariantSelectionX": {
+							"showCounts": true,
+							"variants": {
+								"header": {
+									"key": "header",
+									"entitySet": "HeaderSet",
+									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#header"
+								},
+								"file": {
+									"key": "file",
+									"entitySet": "FileSet",
+									"title": "{{appDescription}}",
+									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+								}
+							}
+						}
 					}
 				},
 				"pages": {

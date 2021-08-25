@@ -1,0 +1,112 @@
+[
+	{
+		"Guid": "1f707e91-0fef-4c88-ade1-65e932921a25",
+		"FileId": "001",
+		"FileName": "File_1.pdf",
+		"UserName": "Admin",
+		"FileSize": "100Kb",
+		"MimeType": "application/pdf",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M59S"
+	},
+	{
+		"Guid": "1f707e91-0fef-4c88-ade1-65e932921a25",
+		"FileId": "002",
+		"FileName": "File_2.ppt",
+		"UserName": "User",
+		"FileSize": "1M",
+		"MimeType": "application/vnd.ms-powerpoint",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H49M32S"
+	},
+	{
+		"Guid": "ecd40596-33eb-4192-b6f1-8a3ce393369a",
+		"FileId": "003",
+		"FileName": "File_3.png",
+		"UserName": "Vendor",
+		"FileSize": "100Kb",
+		"MimeType": "image/png",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M59S"
+	},
+	{
+		"Guid": "99739da1-0057-420c-83c7-b16abaf6bd89",
+		"FileId": "004",
+		"FileName": "File_4.xls",
+		"UserName": "Guest",
+		"FileSize": "100Kb",
+		"MimeType": "application/vnd.ms-excel",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H49M32S"
+	},
+	{
+		"Guid": "99739da1-0057-420c-83c7-b16abaf6bd89",
+		"FileId": "005",
+		"FileName": "File_SuperUser.txt",
+		"UserName": "SuperUser",
+		"FileSize": "1M",
+		"MimeType": "text/plain",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M59S"
+	},
+	{
+		"Guid": "421bf79f-945c-477a-a47e-57f3a7ace4b7",
+		"FileId": "006",
+		"FileName": "File_Vendor.zip",
+		"UserName": "Vendor",
+		"FileSize": "100Kb",
+		"MimeType": "application/zip",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H49M32S"
+	},
+	{
+		"Guid": "6874dfde-fecd-4f72-b857-9b29df14463a",
+		"FileId": "007",
+		"FileName": "File_Basis.doc",
+		"UserName": "Basis",
+		"FileSize": "100Kb",
+		"MimeType": "application/msword",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M33S"
+	},
+	{
+		"Guid": "56d1ba1d-2135-4155-9b1a-263d01d3cc2f",
+		"FileId": "001",
+		"FileName": "File_4.xls",
+		"UserName": "Guest",
+		"FileSize": "100Kb",
+		"MimeType": "application/vnd.ms-excel",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H49M32S"
+	},
+	{
+		"Guid": "f982162a-f1c0-4def-8a3f-f0d5842e56dd",
+		"FileId": "002",
+		"FileName": "File_SuperUser.txt",
+		"UserName": "SuperUser",
+		"FileSize": "1M",
+		"MimeType": "text/plain",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M59S"
+	},
+	{
+		"Guid": "279c03d2-0dc1-443c-b097-e9193440e7be",
+		"FileId": "003",
+		"FileName": "File_Vendor.zip",
+		"UserName": "Vendor",
+		"FileSize": "100Kb",
+		"MimeType": "application/zip",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H49M32S"
+	},
+	{
+		"Guid": "9b21a764-5169-477f-87cb-9dbf84040b97",
+		"FileId": "004",
+		"FileName": "File_Basis.doc",
+		"UserName": "Basis",
+		"FileSize": "100Kb",
+		"MimeType": "application/msword",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M33S"
+	}
+]

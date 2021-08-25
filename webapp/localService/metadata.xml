@@ -8,18 +8,35 @@
             <Key>
                <PropertyRef Name="Guid" />
             </Key>
-            <Property Name="Guid" Type="Edm.Guid" MaxLength="10" Nullable="false" sap:label="GUID" />
+            <Property Name="Guid" Type="Edm.Guid"  Nullable="false" sap:label="GUID" />
             <Property Name="String" Type="Edm.String" MaxLength="10" Nullable="false" sap:label="String"/>
             <Property Name="Decimal" Type="Edm.Decimal" MaxLength="10" Nullable="false" sap:label="Decimal"/>
-            <Property Name="Boolean" Type="Edm.Boolean" MaxLength="10" Nullable="false" sap:label="Boolean"/>
-            <Property Name="Int16" Type="Edm.Int16" MaxLength="10" Nullable="false" sap:label="Int16"/>
-            <Property Name="Int32" Type="Edm.Int32" MaxLength="10" Nullable="false" sap:label="Int32"/>
-            <Property Name="Date" Type="Edm.DateTime" MaxLength="10" Nullable="false" sap:label="Date"/>
-            <Property Name="Time" Type="Edm.Time" MaxLength="10" Nullable="false" sap:label="Time"/>
-            <Property Name="Byte" Type="Edm.Byte" MaxLength="10" Nullable="false" sap:label="Byte"/>
+            <Property Name="Boolean" Type="Edm.Boolean" Nullable="false" sap:filterable="true" sap:label="Boolean"/>
+            <Property Name="Int16" Type="Edm.Int16"  Nullable="false" sap:label="Int16"/>
+            <Property Name="Int32" Type="Edm.Int32"  Nullable="false" sap:label="Int32"/>
+            <Property Name="Date" Type="Edm.DateTime"  Nullable="false" sap:label="Date"/>
+            <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
+            <Property Name="Byte" Type="Edm.Byte"  Nullable="false" sap:label="Byte"/>
          </EntityType>
+
+         <EntityType Name="FileType" sap:label="files props">
+            <Key>
+               <PropertyRef Name="FileId"/>
+               <PropertyRef Name="Guid"/>
+            </Key>
+            <Property Name="Guid" Type="Edm.Guid" Nullable="false" sap:label="Data Id"/>
+            <Property Name="FileId" Type="Edm.String" MaxLength="10" Nullable="false" sap:label="File Id"/>
+            <Property Name="FileName" Type="Edm.String" MaxLength="30" Nullable="false" sap:label="File name"/>
+            <Property Name="UserName" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="User name"/>
+            <Property Name="FileSize" Type="Edm.String" MaxLength="10" Nullable="false" sap:label="File size"/>
+            <Property Name="MimeType" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="MimeType"/>
+            <Property Name="Date" Type="Edm.DateTime"  Nullable="false" sap:display-format="Date" sap:label="Date"/>
+            <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
+         </EntityType>
+
          <EntityContainer Name="Z_LROP_EX_SRVEntities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-            <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:searchable="true" sap:deletable="false" sap:creatable="true" sap:content-version="1" />
+            <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
+            <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:searchable="true" sap:content-version="1" />
          </EntityContainer>
       </Schema>
    </edmx:DataServices>
