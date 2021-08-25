@@ -23,6 +23,15 @@
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
 			Namespace="annotation.Z_LROP_EX_SRV">
 			<Annotations Target="Metadata.HeaderType">
+
+				<Annotation Term="UI.HeaderInfo" >
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n>headerTypeName}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n>headerTypeNamePlural}"/>
+					</Record>
+				</Annotation>
+
+
 				<Annotation Term="UI.LineItem" Qualifier="header">
 					<Collection>
 						<Record Type="UI.DataField">
@@ -123,8 +132,14 @@
 			</Annotations>
 
 			<Annotations Target="Metadata.FileType">
+				<Annotation Term="UI.HeaderInfo" >
+					<Record Type="UI.HeaderInfoType">
+						<PropertyValue Property="TypeName" String="{@i18n>fileTypeName}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n>fileTypeNamePlural}"/>
+					</Record>
+				</Annotation>
+
 				<Annotation Term="UI.LineItem" Qualifier="file">
-					
 					<Collection>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="FileName"/>
