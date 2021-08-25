@@ -14,7 +14,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "/sap/opu/odata/sap/CUSTOM_DATA_SRV/",
+				"uri": "/sap/opu/odata/sap/Z_LROP_EX_SRV/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -28,7 +28,7 @@
 				"type": "ODataAnnotation",
 				"uri": "localService/annotation.xml",
 				"settings": {
-					"localUri": "annotations/annotation.xml"
+					"localUri": "localService/annotation.xml"
 				}
 			}
 		},
@@ -54,8 +54,7 @@
 			"phone": true
 		},
 		"supportedThemes": [
-			"sap_belize",
-			"sbt_spl_belize"
+			"sap_belize"
 		]
 	},
 	"sap.ui5": {
@@ -128,7 +127,7 @@
 			"extensions": {
 				"sap.ui.viewExtensions": {
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
-						"ReplaceFacet|TestDataSet|Example_Facet": {
+						"ReplaceFacet|HeaderSet|replaceFacetFG": {
 							"type": "XML",
 							"className": "sap.ui.core.mvc.View",
 							"viewName": "z.lrop.ex.ext.view.Example"
@@ -142,8 +141,8 @@
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
 						"controllerName": "z.lrop.ex.ext.controller.ObjectPageExt",
 						"sap.ui.generic.app": {
-							"TestDataSet": {
-								"EntitySet": "TestDataSet",
+							"HeaderSet": {
+								"EntitySet": "HeaderSet",
 								"Header": {
 									"Actions": {}
 								}
@@ -163,23 +162,27 @@
 		"settings": {
 			"showDraftToggle": false,
 			"objectPageHeaderType": "Dynamic",
-			"forceGlobalRefresh": false
+			"forceGlobalRefresh": false,
+			"isFiori3Enabled": true
 		},
 		"pages": {
-			"ListReport|TestDataSet": {
-				"entitySet": "TestDataSet",
+			"ListReport|HeaderSet": {
+				"entitySet": "HeaderSet",
 				"component": {
 					"name": "sap.suite.ui.generic.template.ListReport",
 					"list": true,
 					"settings": {
+						"isFiori3Enabled": true,
 						"multiSelect": true,
+						"gridTable": true,
 						"smartVariantManagement": true,
-						"enableTableFilterInPageVariant": true
+						"variantManagementHidden": false,
+						"enableTableFilterInPageVariant": false
 					}
 				},
 				"pages": {
-					"ObjectPage|TestDataSet": {
-						"entitySet": "TestDataSet",
+					"ObjectPage|HeaderSet": {
+						"entitySet": "HeaderSet",
 						"component": {
 							"name": "sap.suite.ui.generic.template.ObjectPage",
 							"settings": {}

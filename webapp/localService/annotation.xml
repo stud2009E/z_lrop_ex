@@ -1,6 +1,6 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-	<edmx:Reference Uri="/sap/opu/odata/SAP/CUSTOM_DATA_SRV/$metadata">
-		<edmx:Include Alias="Metadata" Namespace="CUSTOM_DATA_SRV"/>
+	<edmx:Reference Uri="/sap/opu/odata/SAP/Z_LROP_EX_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="Z_LROP_EX_SRV"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
 		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
@@ -14,10 +14,15 @@
 	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
 		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
 	</edmx:Reference>
+	
+	<edmx:Reference Uri="https://github.com/oasis-tcs/odata-vocabularies/blob/main/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+
 	<edmx:DataServices>
 		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm"
-			Namespace="annotation.CUSTOM_DATA_SRV">
-			<Annotations Target="Metadata.TestDataType">
+			Namespace="annotation.Z_LROP_EX_SRV">
+			<Annotations Target="Metadata.HeaderType">
 				<Annotation Term="UI.LineItem">
 					<Collection>
 						<Record Type="UI.DataField">
@@ -49,10 +54,37 @@
 				<Annotation Term="UI.Facets">
 					<Collection>
 						<Record Type="UI.ReferenceFacet">
-							<PropertyValue Property="ID" String="Example_Facet"/>
-							<PropertyValue Property="Label" String="{@i18n&gt;labelExampleFacet}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#replaceFacetFG"/>
+							<PropertyValue Property="ID" String="replaceFacetFG"/>
+							<PropertyValue Property="Label" String="{@i18n>labelExampleFacet}"/>
 						</Record>
 					</Collection>
+				</Annotation>
+
+				<Annotation Term="UI.FieldGroup" Qualifier="replaceFacetFG">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+						<!-- exmaple facet for replace -->
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+			<Annotations Target="Metadata.Z_LROP_EX_SRVEntities/HeaderSet">
+				<Annotation Term="Capabilities.DeleteRestrictions">
+					<Record Type="Capabilities.DeleteRestrictionsType">
+						<PropertyValue Property="Deletable" Bool="true"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.UpdateRestrictions">
+					<Record Type="Capabilities.UpdateRestrictionsType">
+						<PropertyValue Property="Updatable" Bool="true"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="Capabilities.InsertRestrictions">
+					<Record Type="Capabilities.InsertRestrictionsType">
+						<PropertyValue Property="Insertable" Bool="true"/>
+					</Record>
 				</Annotation>
 			</Annotations>
 		</Schema>
