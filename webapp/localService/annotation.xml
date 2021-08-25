@@ -32,9 +32,9 @@
 				</Annotation>
 
 
-				<Annotation Term="UI.LineItem" Qualifier="header">
+				<Annotation Term="UI.LineItem">
+					<Annotation Term="UI.Criticality" Path="Criticality"/>
 					<Collection>
-
 						<Record Type="UI.DataFieldForIntentBasedNavigation">
 							<PropertyValue Property="SemanticObject" String="Z_OVP_EX"/>
 							<PropertyValue Property="Action" String="display"/>
@@ -137,9 +137,15 @@
 						</PropertyValue>
 						<PropertyValue Property="PresentationVariant">
 							<Record Type="UI.PresentationVariantType">
+								<PropertyValue Property="RequestAtLeast">
+									<Collection>
+										<PropertyPath>Criticality</PropertyPath>
+										<PropertyPath>Byte</PropertyPath>
+									</Collection>
+								</PropertyValue>
 								<PropertyValue Property="Visualizations">
 									<Collection>
-										<AnnotationPath>@UI.LineItem#header</AnnotationPath>
+										<AnnotationPath>@UI.LineItem</AnnotationPath>
 									</Collection>
 								</PropertyValue>
 								<PropertyValue Property="SortOrder">

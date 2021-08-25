@@ -136,8 +136,7 @@
 				},
 				"sap.ui.controllerExtensions": {
 					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
-						"controllerName": "z.lrop.ex.ext.controller.ListReportExt",
-						
+						"controllerName": "z.lrop.ex.ext.controller.ListReportExt"
 					},
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
 						"controllerName": "z.lrop.ex.ext.controller.ObjectPageExt",
