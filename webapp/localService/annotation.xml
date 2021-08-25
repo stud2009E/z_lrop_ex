@@ -49,6 +49,21 @@
 					</Record>
 				</Annotation>
 
+				<Annotation Term="UI.FieldGroup" Qualifier="headerFGColumnEx">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Guid"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="String"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
 				<Annotation Term="UI.LineItem">
 					<Annotation Term="UI.Criticality" Path="Criticality"/>
 					<Collection>
@@ -56,10 +71,14 @@
 							<PropertyValue Property="Label" String="{@i18n>rating}"/>
 							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Rating"/>
 						</Record>
-
 						<Record Type="UI.DataFieldForAnnotation">
 							<PropertyValue Property="Label" String="{@i18n>progress}"/>
 							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#Progress"/>
+						</Record>
+
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Label" String="{@i18n>groupFields}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#headerFGColumnEx"/>
 						</Record>
 
 						<Record Type="UI.DataFieldForIntentBasedNavigation">
