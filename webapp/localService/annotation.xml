@@ -259,8 +259,12 @@
 										</PropertyValue>
 									</Record>
 								</Collection>
-								
 							</PropertyValue>
+						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="ID" String="fileOP"/>
+							<PropertyValue Property="Label" String="{@i18n>fileOPFacet}"/>
+							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem#fileOP"/>
 						</Record>
 					</Collection>
 				</Annotation>
@@ -390,21 +394,41 @@
 					</Collection>
 				</Annotation>
 
-				<Annotation Term="UI.PresentationVariant">
-					<Record Type="UI.PresentationVariantType">
-						<PropertyValue Property="ID" String="filePV"/>
-						<PropertyValue Property="Visualizations">
-							<Collection>
-								<AnnotationPath>@UI.LineItem#file</AnnotationPath>
-							</Collection>
-						</PropertyValue>
-					</Record>
+				<Annotation Term="UI.LineItem" Qualifier="fileOP">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="FileName"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="FileSize"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="UserName"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="MimeType"/>
+						</Record>
+					</Collection>
 				</Annotation>
 
-				<Annotation Term="UI.SelectionVariant" >
-					<Record Type="UI.SelectionVariantType">
-						<PropertyValue Property="ID" String="fileSV"/>
+				<Annotation Term="UI.SelectionPresentationVariant" Qualifier="file">
+					<Record Type="UI.SelectionPresentationVariantType">
 						<PropertyValue Property="Text" String="{@i18n>fileSVText}"/>
+						<PropertyValue Property="SelectionVariant">
+							<Record Type="UI.SelectionVariantType">
+								<PropertyValue Property="ID" String="fileSV"/>
+							</Record>
+						</PropertyValue>
+						<PropertyValue Property="PresentationVariant">
+							<Record Type="UI.PresentationVariantType">
+								<PropertyValue Property="ID" String="filePV"/>
+									<PropertyValue Property="Visualizations">
+										<Collection>
+											<AnnotationPath>@UI.LineItem#file</AnnotationPath>
+										</Collection>
+									</PropertyValue>
+							</Record>
+						</PropertyValue>
 					</Record>
 				</Annotation>
 			</Annotations>

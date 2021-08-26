@@ -18,7 +18,11 @@
             <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
             <Property Name="Byte" Type="Edm.Byte"  Nullable="false" sap:label="Byte"/>
             <Property Name="Criticality" Type="Edm.Int16"  Nullable="false" sap:label="Criticality"/>
-            <Property Name="Progress" Type="Edm.Decimal"  Nullable="false" sap:label="Criticality"/>
+            <Property Name="Progress" Type="Edm.Decimal"  Nullable="false" sap:label="Progress"/>
+            <NavigationProperty Name="to_Files" 
+               Relationship="Z_LROP_EX_SRV.assoc_Files" 
+               FromRole="FromRole_File" 
+               ToRole="ToRole_File"/>
          </EntityType>
 
          <EntityType Name="FileType" sap:label="files props">
@@ -51,6 +55,19 @@
             <Property Name="MeasureC" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="3" sap:label="MeasureC" sap:aggregation-role="measure"/>
          </EntityType> 
 
+         <Association Name="assoc_Files" sap:content-version="1">
+            <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="FromRole_File"/>
+            <End Type="Z_LROP_EX_SRV.FileType" Multiplicity="*" Role="ToRole_File"/>
+            <ReferentialConstraint>
+               <Principal Role="FromRole_File">
+                  <PropertyRef Name="Guid"/>
+               </Principal>
+               <Dependent Role="ToRole_File">
+                  <PropertyRef Name="Guid"/>
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+
          <EntityContainer Name="Z_LROP_EX_SRVEntities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
             <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
             <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:content-version="1" />
@@ -62,6 +79,12 @@
                <Parameter Name="Guid" Type="Edm.Guid" Mode="In"/>
                <Parameter Name="Decimal" Type="Edm.Decimal" Mode="In" MaxLength="10"/>
             </FunctionImport>
+
+            <AssociationSet Name="set_assoc_File" Association="Z_LROP_EX_SRV.assoc_Files" 
+               sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="HeaderSet" Role="FromRole_File"/>
+               <End EntitySet="FileSet" Role="ToRole_File"/>
+            </AssociationSet>
 
          </EntityContainer>
       </Schema>

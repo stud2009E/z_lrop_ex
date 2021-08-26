@@ -194,7 +194,7 @@
 								"file": {
 									"key": "file",
 									"entitySet": "FileSet",
-									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant"
+									"annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#file"
 								},
 								"analytical": {
 									"key": "analytical",
