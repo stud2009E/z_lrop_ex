@@ -43,6 +43,16 @@
 					</Record>
 				</Annotation>
 
+				<Annotation Term="UI.Identification" >
+					<Collection>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Determining" Bool="true"/>
+							<PropertyValue Property="Label" String="{@i18n>processHeader}"/>
+							<PropertyValue Property="Action" String="Z_LROP_EX_SRV.Z_LROP_EX_SRVEntities/ProcessHeader"/>
+						</Record>
+					</Collection>
+				</Annotation>
+
 				<Annotation Term="UI.HeaderFacets">
 					<Collection>
 						<Record Type="UI.CollectionFacet">
