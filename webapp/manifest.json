@@ -217,7 +217,36 @@
 							"name": "sap.suite.ui.generic.template.ObjectPage",
 							"settings": {
 								"editableHeaderContent": false,
-								"simpleHeaderFacets": false
+								"simpleHeaderFacets": false,
+								"showRelatedApps": true,
+								"sections": {
+									"fileOP":{
+										"quickVariantSelection": {
+											"showCounts": true,
+											"variants": {
+												"Basis": {
+													"key": "Basis",
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Basis"
+												},
+												"User": {
+													"key": "User",
+													"annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#User"
+												}
+											}
+										}
+									},
+									"to_Files::com.sap.vocabularies.UI.v1.LineItem": {
+										"navigationProperty": "to_Files",
+										"entitySet": "FileSet",
+										"createMode": "inline",
+										"tableType": "GridTable",
+										"condensedTableLayout": true,
+										"tableSettings": {
+											"multiSelect": true,
+											"selectAll": false
+										}
+									}
+					 			}
 							}
 						}
 					}

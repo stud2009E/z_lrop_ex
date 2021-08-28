@@ -264,7 +264,7 @@
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="ID" String="fileOP"/>
 							<PropertyValue Property="Label" String="{@i18n>fileOPFacet}"/>
-							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem#fileOP"/>
+							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem"/>
 						</Record>
 					</Collection>
 				</Annotation>
@@ -394,7 +394,7 @@
 					</Collection>
 				</Annotation>
 
-				<Annotation Term="UI.LineItem" Qualifier="fileOP">
+				<Annotation Term="UI.LineItem">
 					<Collection>
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="FileName"/>
@@ -428,6 +428,50 @@
 										</Collection>
 									</PropertyValue>
 							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.SelectionVariant" Qualifier="User">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="{@i18n>userFilesFilter}"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="UserName"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="User"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.SelectionVariant" Qualifier="Basis">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="Text" String="{@i18n>basisFilesFilter}"/>
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="UserName"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String="Basis"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
 						</PropertyValue>
 					</Record>
 				</Annotation>

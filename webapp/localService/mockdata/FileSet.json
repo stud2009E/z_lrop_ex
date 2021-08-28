@@ -108,5 +108,25 @@
 		"MimeType": "application/msword",
 		"Date": "/Date(1598838725000)/",
 		"Time": "PT23H59M33S"
+	},
+	{
+		"Guid": "9b21a764-5169-477f-87cb-9dbf84040b97",
+		"FileId": "005",
+		"FileName": "Service_Basis.zip",
+		"UserName": "Basis",
+		"FileSize": "200Kb",
+		"MimeType": "application/zip",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT23H59M33S"
+	},
+	{
+		"Guid": "9b21a764-5169-477f-87cb-9dbf84040b97",
+		"FileId": "006",
+		"FileName": "Uploads_Basis.txt",
+		"UserName": "User",
+		"FileSize": "400Kb",
+		"MimeType": "application/txt",
+		"Date": "/Date(1598838725000)/",
+		"Time": "PT22H23M30S"
 	}
 ]
