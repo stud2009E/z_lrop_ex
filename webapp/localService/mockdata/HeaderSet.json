@@ -10,7 +10,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 1,
-		"Progress": 75
+		"Progress": 75,
+		"Status":"00"
 	},
 	{
 		"Guid": "ecd40596-33eb-4192-b6f1-8a3ce393369a",
@@ -23,7 +24,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 2,
-		"Progress": 20
+		"Progress": 20,
+		"Status":"01"
 	},
 	{
 		"Guid": "99739da1-0057-420c-83c7-b16abaf6bd89",
@@ -36,7 +38,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 3,
-		"Progress": 10
+		"Progress": 10,
+		"Status":"02"
 	},
 	{
 		"Guid": "421bf79f-945c-477a-a47e-57f3a7ace4b7",
@@ -49,7 +52,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 7,
 		"Criticality": 3,
-		"Progress": 30
+		"Progress": 30,
+		"Status":"03"
 	},
 	{
 		"Guid": "6874dfde-fecd-4f72-b857-9b29df14463a",
@@ -62,7 +66,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 3,
-		"Progress": 80
+		"Progress": 80,
+		"Status":"00"
 	},
 	{
 		"Guid": "96c4d8ef-9491-471b-8b4f-8dab98ae64da",
@@ -75,7 +80,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 0,
-		"Progress": 65
+		"Progress": 65,
+		"Status":"01"
 	},
 	{
 		"Guid": "56d1ba1d-2135-4155-9b1a-263d01d3cc2f",
@@ -88,7 +94,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 3,
 		"Criticality": 1,
-		"Progress": 80
+		"Progress": 80,
+		"Status":"02"
 	},
 	{
 		"Guid": "f982162a-f1c0-4def-8a3f-f0d5842e56dd",
@@ -101,7 +108,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 7,
 		"Criticality": 2,
-		"Progress": 99
+		"Progress": 99,
+		"Status":"03"
 	},
 	{
 		"Guid": "279c03d2-0dc1-443c-b097-e9193440e7be",
@@ -114,7 +122,8 @@
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 3,
-		"Progress": 60
+		"Progress": 60,
+		"Status":"00"
 	},
 	{
 		"Guid": "9b21a764-5169-477f-87cb-9dbf84040b97",
@@ -127,6 +136,7 @@
 		"Time": "PT23H59M59S",
 		"Byte": 1,
 		"Criticality": 3,
-		"Progress": 35
+		"Progress": 35,
+		"Status":"01"
 	}
 ]

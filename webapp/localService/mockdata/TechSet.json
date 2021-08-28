@@ -1,0 +1,42 @@
+[
+	{
+		"Status": "00",
+		"HasApprove": true,
+		"HasChange": false,
+		"HasReplace": false,
+		"HideFile": false,
+		"UploadHidden": false,
+		"FileDeleteVisible": true,
+		"Field_fc": 0
+	},
+	{
+		"Status": "01",
+		"HasApprove": false,
+		"HasChange": true,
+		"HasReplace": false,
+		"HideFile": false,
+		"UploadHidden": true,
+		"FileDeleteVisible": false,
+		"Field_fc": 1
+	},
+	{
+		"Status": "02",
+		"HasApprove": false,
+		"HasChange": false,
+		"HasReplace": true,
+		"HideFile": true,
+		"UploadHidden": true,
+		"FileDeleteVisible": true,
+		"Field_fc": 3
+	},
+	{
+		"Status": "03",
+		"HasApprove": false,
+		"HasChange": false,
+		"HasReplace": true,
+		"HideFile": true,
+		"UploadHidden": true,
+		"FileDeleteVisible": true,
+		"Field_fc": 7
+	}
+]

@@ -221,6 +221,10 @@
 							<PropertyValue Property="ID" String="replaceFacetFG"/>
 							<PropertyValue Property="Label" String="{@i18n>labelExampleFacet}"/>
 						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Label" String="{@i18n>technical}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#tech"/>
+						</Record>
 						<!-- <Record Type="UI.CollectionFacet">
 							<PropertyValue Property="Facets">
 								<Collection>
@@ -286,6 +290,39 @@
 					<Record Type="UI.FieldGroupType">
 						<PropertyValue Property="Data">
 						<!-- exmaple facet for replace -->
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
+				<Annotation Term="UI.FieldGroup" Qualifier="tech">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/Status"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/Field_fc"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/FileDeleteVisible"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/HasApprove"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/HasChange"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/HasReplace"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/HideFile"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_TechAttribute/UploadHidden"/>
+								</Record>
+							</Collection>
 						</PropertyValue>
 					</Record>
 				</Annotation>
@@ -364,6 +401,7 @@
 									<Collection>
 										<PropertyPath>Criticality</PropertyPath>
 										<PropertyPath>Byte</PropertyPath>
+										<PropertyPath>Status</PropertyPath>
 									</Collection>
 								</PropertyValue>
 								<PropertyValue Property="Visualizations">
@@ -585,6 +623,16 @@
 
 			<Annotations Target="Metadata.Z_LROP_EX_SRVEntities/ProcessHeader">
 				<Annotation Term="Common.IsActionCritical" Bool="true"/>
+
+				<Annotation Term="Common.SideEffects">
+					<Record Type="Common.SideEffectsType">
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
 			</Annotations>
 
 		</Schema>

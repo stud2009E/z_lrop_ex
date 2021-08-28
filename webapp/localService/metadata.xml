@@ -19,10 +19,15 @@
             <Property Name="Byte" Type="Edm.Byte"  Nullable="false" sap:label="Byte"/>
             <Property Name="Criticality" Type="Edm.Int16"  Nullable="false" sap:label="Criticality"/>
             <Property Name="Progress" Type="Edm.Decimal"  Nullable="false" sap:label="Progress"/>
+            <Property Name="Status" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="Status"/>
             <NavigationProperty Name="to_Files" 
                Relationship="Z_LROP_EX_SRV.assoc_Files" 
                FromRole="FromRole_File" 
                ToRole="ToRole_File"/>
+            <NavigationProperty Name="to_TechAttribute" 
+               Relationship="Z_LROP_EX_SRV.assoc_DataTech" 
+               FromRole="FromRole_DataTech" 
+               ToRole="ToRole_DataTech"/>
          </EntityType>
 
          <EntityType Name="FileType" sap:label="files props">
@@ -39,6 +44,20 @@
             <Property Name="Date" Type="Edm.DateTime"  Nullable="false" sap:display-format="Date" sap:label="Date"/>
             <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
          </EntityType> 
+
+         <EntityType Name="TechType" sap:label="technical props">
+            <Key>
+               <PropertyRef Name="Status"/>
+            </Key>
+            <Property Name="Status" Type="Edm.String" MaxLength="2" Nullable="false" sap:label="Status"/>
+            <Property Name="HasApprove" Type="Edm.Boolean" Nullable="false" sap:label="Has approve"/>
+            <Property Name="HasChange" Type="Edm.Boolean" Nullable="false" sap:label="Has change"/>
+            <Property Name="HasReplace" Type="Edm.Boolean" Nullable="false" sap:label="Has replace"/>
+            <Property Name="HideFile" Type="Edm.Boolean" Nullable="false" sap:label="Hide attachments"/>
+            <Property Name="UploadHidden" Type="Edm.Boolean" Nullable="false" sap:label="Hide uppload button"/>
+            <Property Name="FileDeleteVisible" Type="Edm.Boolean" Nullable="false" sap:label="Show delete button"/>
+            <Property Name="Field_fc" Type="Edm.Byte" Nullable="false" sap:label="Field control for field"/>
+         </EntityType>
 
          <EntityType Name="AnayticalType" sap:label="analytical data" sap:semantics="aggregate">
             <Key>
@@ -68,10 +87,24 @@
             </ReferentialConstraint>
          </Association>
 
+         <Association Name="assoc_DataTech" sap:content-version="1">
+            <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="FromRole_DataTech"/>
+            <End Type="Z_LROP_EX_SRV.TechType" Multiplicity="0..1" Role="ToRole_DataTech"/>
+            <ReferentialConstraint>
+               <Principal Role="FromRole_DataTech">
+                  <PropertyRef Name="Status"/>
+               </Principal>
+               <Dependent Role="ToRole_DataTech">
+                  <PropertyRef Name="Status"/>
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+
          <EntityContainer Name="Z_LROP_EX_SRVEntities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
             <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
             <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:content-version="1" />
             <EntitySet Name="AnalyticalSet" EntityType="Z_LROP_EX_SRV.AnayticalType" sap:label="Analytical data" sap:content-version="1" />
+            <EntitySet Name="TechSet" EntityType="Z_LROP_EX_SRV.TechType" sap:content-version="1" />
 
             <FunctionImport Name="ProcessHeader" ReturnType="Z_LROP_EX_SRV.HeaderType" EntitySet="HeaderSet" m:HttpMethod="POST"
                sap:action-for="Z_LROP_EX_SRV.HeaderType" 
@@ -84,6 +117,12 @@
                sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                <End EntitySet="HeaderSet" Role="FromRole_File"/>
                <End EntitySet="FileSet" Role="ToRole_File"/>
+            </AssociationSet>
+
+            <AssociationSet Name="set_assoc_DataTech" Association="Z_LROP_EX_SRV.assoc_DataTech" 
+               sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="HeaderSet" Role="FromRole_DataTech"/>
+               <End EntitySet="TechSet" Role="ToRole_DataTech"/>
             </AssociationSet>
 
          </EntityContainer>
