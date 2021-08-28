@@ -244,10 +244,12 @@
 						</Record> -->
 						<Record Type="UI.CollectionFacet">
 							<PropertyValue Property="Label" String="{@i18n>collectionOfCollection}"/>
+							<PropertyValue Property="ID" String="collectionOfCollection"/>
 							<PropertyValue Property="Facets">
 								<Collection>
 									<Record Type="UI.CollectionFacet">
 										<PropertyValue Property="Label" String="{@i18n>texts}"/>
+										<PropertyValue Property="ID" String="texts"/>
 										<PropertyValue Property="Facets">
 											<Collection>
 												<Record Type="UI.ReferenceFacet">
@@ -259,6 +261,7 @@
 									</Record>
 									<Record Type="UI.CollectionFacet">
 										<PropertyValue Property="Label" String="{@i18n>numbers}"/>
+										<PropertyValue Property="ID" String="numbers"/>
 										<PropertyValue Property="Facets">
 											<Collection>
 												<Record Type="UI.ReferenceFacet">
