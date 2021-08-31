@@ -337,6 +337,9 @@
 								<Record Type="UI.DataField">
 									<PropertyValue Property="Value" Path="String"/>
 								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Status"/>
+								</Record>
 							</Collection>
 						</PropertyValue>
 					</Record>
@@ -604,7 +607,7 @@
 				</Annotation>
 				<Annotation Term="Capabilities.InsertRestrictions">
 					<Record Type="Capabilities.InsertRestrictionsType">
-						<PropertyValue Property="Insertable" Bool="false"/>
+						<PropertyValue Property="Insertable" Bool="true"/>
 					</Record>
 				</Annotation>
 

@@ -8,7 +8,7 @@
             <Key>
                <PropertyRef Name="Guid" />
             </Key>
-            <Property Name="Guid" Type="Edm.Guid"  Nullable="false" sap:label="GUID" />
+            <Property Name="Guid" Type="Edm.Guid"  Nullable="false" sap:updatable="false" sap:creatable="false" sap:label="GUID" />
             <Property Name="String" Type="Edm.String" MaxLength="10" Nullable="false" sap:label="String"/>
             <Property Name="Decimal" Type="Edm.Decimal" MaxLength="10" Nullable="false" sap:label="Decimal"/>
             <Property Name="Boolean" Type="Edm.Boolean" Nullable="false" sap:filterable="true" sap:label="Boolean"/>
@@ -104,7 +104,7 @@
             <EntitySet Name="HeaderSet" EntityType="Z_LROP_EX_SRV.HeaderType" sap:label="Header set" sap:searchable="true" sap:content-version="1" />
             <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:content-version="1" />
             <EntitySet Name="AnalyticalSet" EntityType="Z_LROP_EX_SRV.AnayticalType" sap:label="Analytical data" sap:content-version="1" />
-            <EntitySet Name="TechSet" EntityType="Z_LROP_EX_SRV.TechType" sap:content-version="1" />
+            <EntitySet Name="TechSet" EntityType="Z_LROP_EX_SRV.TechType" sap:creatable="false" sap:updatable="false" sap:content-version="1" />
 
             <FunctionImport Name="ProcessHeader" ReturnType="Z_LROP_EX_SRV.HeaderType" EntitySet="HeaderSet" m:HttpMethod="POST"
                sap:action-for="Z_LROP_EX_SRV.HeaderType" 
