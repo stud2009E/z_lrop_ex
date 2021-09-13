@@ -178,10 +178,6 @@
 						"variantManagementHidden": false,
 						"enableTableFilterInPageVariant": true,
 
-						"createWithFilters": {        
-							"strategy": "extension"       
-						},
-
 						"tableSettings": {
 							"type": "AnalyticalTable",
 							"multiSelect": true

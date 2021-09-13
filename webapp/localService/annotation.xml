@@ -337,9 +337,6 @@
 								<Record Type="UI.DataField">
 									<PropertyValue Property="Value" Path="String"/>
 								</Record>
-								<Record Type="UI.DataField">
-									<PropertyValue Property="Value" Path="Status"/>
-								</Record>
 							</Collection>
 						</PropertyValue>
 					</Record>
@@ -607,7 +604,7 @@
 				</Annotation>
 				<Annotation Term="Capabilities.InsertRestrictions">
 					<Record Type="Capabilities.InsertRestrictionsType">
-						<PropertyValue Property="Insertable" Bool="true"/>
+						<PropertyValue Property="Insertable" Bool="false"/>
 					</Record>
 				</Annotation>
 
@@ -631,7 +628,7 @@
 					<Record Type="Common.SideEffectsType">
 						<PropertyValue Property="TargetEntities">
 							<Collection>
-								<NavigationPropertyPath>_it/to_TechAttribute</NavigationPropertyPath>
+								<NavigationPropertyPath></NavigationPropertyPath>
 							</Collection>
 						</PropertyValue>
 					</Record>
