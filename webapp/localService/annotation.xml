@@ -71,6 +71,7 @@
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Label" String="{@i18n>otherData}"/>
 							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#otherData"/>
+							<Annotation Term="UI.Hidden" Path="to_TechAttribute/HideOtherData"/>
 						</Record>
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#DataPoint"/>
@@ -225,6 +226,7 @@
 							<PropertyValue Property="ID" String="fileOP"/>
 							<PropertyValue Property="Label" String="{@i18n>fileOPFacet}"/>
 							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem"/>
+							<Annotation Term="UI.Hidden" Path="to_TechAttribute/HideFilesFacet"/>
 						</Record>
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Label" String="{@i18n>technical}"/>
@@ -317,10 +319,10 @@
 									<PropertyValue Property="Value" Path="to_TechAttribute/HasReplace"/>
 								</Record>
 								<Record Type="UI.DataField">
-									<PropertyValue Property="Value" Path="to_TechAttribute/HideFile"/>
+									<PropertyValue Property="Value" Path="to_TechAttribute/HideOtherData"/>
 								</Record>
 								<Record Type="UI.DataField">
-									<PropertyValue Property="Value" Path="to_TechAttribute/UploadHidden"/>
+									<PropertyValue Property="Value" Path="to_TechAttribute/HideFilesFacet"/>
 								</Record>
 							</Collection>
 						</PropertyValue>
@@ -662,6 +664,10 @@
 				</Annotation>
 			</Annotations>
 
+
+			<Annotations Target="Metadata.HeaderType/String">
+				<Annotation Term="Common.FieldControl" Path="to_TechAttribute/Field_fc"/>
+			</Annotations>
 
 			<Annotations Target="Metadata.Z_LROP_EX_SRVEntities/HeaderSet">
 				<Annotation Term="Capabilities.DeleteRestrictions">

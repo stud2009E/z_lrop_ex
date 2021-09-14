@@ -57,10 +57,10 @@
             <Property Name="HasApprove" Type="Edm.Boolean" Nullable="false" sap:label="Has approve"/>
             <Property Name="HasChange" Type="Edm.Boolean" Nullable="false" sap:label="Has change"/>
             <Property Name="HasReplace" Type="Edm.Boolean" Nullable="false" sap:label="Has replace"/>
-            <Property Name="HideFile" Type="Edm.Boolean" Nullable="false" sap:label="Hide attachments"/>
-            <Property Name="UploadHidden" Type="Edm.Boolean" Nullable="false" sap:label="Hide uppload button"/>
+            <Property Name="HideOtherData" Type="Edm.Boolean" Nullable="false" sap:label="Hide other data"/>
+            <Property Name="HideFilesFacet" Type="Edm.Boolean" Nullable="false" sap:label="Hide files facet"/>
             <Property Name="FileDeleteVisible" Type="Edm.Boolean" Nullable="false" sap:label="Show delete button"/>
-            <Property Name="Field_fc" Type="Edm.Byte" Nullable="false" sap:label="Field control for field"/>
+            <Property Name="Field_fc" Type="Edm.Byte" Nullable="false" sap:label="Field control for field String"/>
          </EntityType>
 
          <EntityType Name="AnayticalType" sap:label="analytical data" sap:semantics="aggregate">

@@ -4,7 +4,7 @@
 		"HasApprove": true,
 		"HasChange": false,
 		"HasReplace": false,
-		"HideFile": false,
+		"HideOtherData": false,
 		"UploadHidden": false,
 		"FileDeleteVisible": true,
 		"Field_fc": 0
@@ -14,7 +14,7 @@
 		"HasApprove": false,
 		"HasChange": true,
 		"HasReplace": false,
-		"HideFile": false,
+		"HideOtherData": false,
 		"UploadHidden": true,
 		"FileDeleteVisible": false,
 		"Field_fc": 1
@@ -24,7 +24,7 @@
 		"HasApprove": false,
 		"HasChange": false,
 		"HasReplace": true,
-		"HideFile": true,
+		"HideOtherData": true,
 		"UploadHidden": true,
 		"FileDeleteVisible": true,
 		"Field_fc": 3
@@ -34,7 +34,7 @@
 		"HasApprove": false,
 		"HasChange": false,
 		"HasReplace": true,
-		"HideFile": true,
+		"HideOtherData": true,
 		"UploadHidden": true,
 		"FileDeleteVisible": true,
 		"Field_fc": 7
