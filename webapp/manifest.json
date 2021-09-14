@@ -254,6 +254,9 @@
 								"entitySet": "FileSet",
 								"navigationProperty": "to_Files",
 								"component": {
+									"settings": {
+										"editableHeaderContent": true
+									},
 									"name": "sap.suite.ui.generic.template.ObjectPage"
 								}
 							}

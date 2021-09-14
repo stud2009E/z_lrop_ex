@@ -700,7 +700,7 @@
 					<Record Type="Common.SideEffectsType">
 						<PropertyValue Property="TargetEntities">
 							<Collection>
-								<NavigationPropertyPath></NavigationPropertyPath>
+								<NavigationPropertyPath>_it/to_TechAttribute</NavigationPropertyPath>
 							</Collection>
 						</PropertyValue>
 					</Record>
