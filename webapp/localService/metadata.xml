@@ -28,7 +28,30 @@
                Relationship="Z_LROP_EX_SRV.assoc_DataTech" 
                FromRole="FromRole_DataTech" 
                ToRole="ToRole_DataTech"/>
+            
+            <NavigationProperty Name="to_Person" 
+               Relationship="Z_LROP_EX_SRV.assoc_HeaderPerson" 
+               FromRole="FromRole_HeaderPerson" 
+               ToRole="ToRole_HeaderPerson"/>
          </EntityType>
+
+         <EntityType Name="PersonType" sap:label="Person data">
+            <Key>
+               <PropertyRef Name="Guid"/>
+            </Key>
+            <Property Name="Guid" Type="Edm.Guid" Nullable="false" sap:label="Guid"/>
+            <Property Name="FormattedName" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="FormattedName"/>
+            <Property Name="FirstName" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="FirstName"/>
+            <Property Name="MiddleName" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="MiddleName"/>
+            <Property Name="LastName" Type="Edm.String" MaxLength="20" Nullable="false" sap:label="LastName"/>
+            <Property Name="PhoneNumber" Type="Edm.String" sap:semantics="tel" MaxLength="20" Nullable="false" sap:label="PhoneNumber"/>
+            <Property Name="MobilePhoneNumber" Type="Edm.String" sap:semantics="tel;type=cell" MaxLength="20" Nullable="false" sap:label="MobilePhoneNumber"/>
+            <Property Name="EmailAddress" Type="Edm.String" sap:semantics="email" MaxLength="20" Nullable="false" sap:label="EmailAddress"/>
+            <Property Name="Url" Type="Edm.String" sap:semantics="url" MaxLength="20" Nullable="false" sap:label="Url"/>
+            <Property Name="City" Type="Edm.String" sap:semantics="city" MaxLength="20" Nullable="false" sap:label="City"/>
+            <Property Name="Street" Type="Edm.String" sap:semantics="street" MaxLength="20" Nullable="false" sap:label="Street"/>
+            <Property Name="Country" Type="Edm.String" sap:semantics="country" MaxLength="20" Nullable="false" sap:label="Country"/>
+         </EntityType> 
 
          <EntityType Name="FileType" sap:label="files props">
             <Key>
@@ -91,6 +114,19 @@
             </ReferentialConstraint>
          </Association>
 
+         <Association Name="assoc_HeaderPerson" sap:content-version="1">
+            <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="FromRole_HeaderPerson"/>
+            <End Type="Z_LROP_EX_SRV.PersonType" Multiplicity="0..1" Role="ToRole_HeaderPerson"/>
+            <ReferentialConstraint>
+               <Principal Role="FromRole_HeaderPerson">
+                  <PropertyRef Name="Guid"/>
+               </Principal>
+               <Dependent Role="ToRole_HeaderPerson">
+                  <PropertyRef Name="Guid"/>
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+
          <Association Name="assoc_FileHeader" sap:content-version="1">
             <End Type="Z_LROP_EX_SRV.FileType" Multiplicity="1" Role="FromRole_FileHeader"/>
             <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="ToRole_FileHeader"/>
@@ -122,6 +158,7 @@
             <EntitySet Name="FileSet" EntityType="Z_LROP_EX_SRV.FileType" sap:label="File set" sap:content-version="1" />
             <EntitySet Name="AnalyticalSet" EntityType="Z_LROP_EX_SRV.AnayticalType" sap:label="Analytical data" sap:content-version="1" />
             <EntitySet Name="TechSet" EntityType="Z_LROP_EX_SRV.TechType" sap:content-version="1" />
+            <EntitySet Name="PersonSet" EntityType="Z_LROP_EX_SRV.PersonType" sap:content-version="1" />
 
             <FunctionImport Name="ProcessHeader" ReturnType="Z_LROP_EX_SRV.HeaderType" EntitySet="HeaderSet" m:HttpMethod="POST"
                sap:action-for="Z_LROP_EX_SRV.HeaderType" 
@@ -134,6 +171,12 @@
                sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                <End EntitySet="HeaderSet" Role="FromRole_File"/>
                <End EntitySet="FileSet" Role="ToRole_File"/>
+            </AssociationSet>
+
+            <AssociationSet Name="set_assoc_HeaderPerson" Association="Z_LROP_EX_SRV.assoc_HeaderPerson" 
+               sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="HeaderSet" Role="FromRole_HeaderPerson"/>
+               <End EntitySet="PersonSet" Role="ToRole_HeaderPerson"/>
             </AssociationSet>
 
             <AssociationSet Name="set_assoc_DataTech" Association="Z_LROP_EX_SRV.assoc_DataTech" 

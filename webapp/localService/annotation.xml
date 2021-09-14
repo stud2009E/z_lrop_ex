@@ -76,6 +76,10 @@
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#DataPoint"/>
 						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Label" String="{@i18n>contact}"/>
+							<PropertyValue Property="Target" AnnotationPath="to_Person/@Communication.Contact"/>
+						</Record>
 					</Collection>
 				</Annotation>
 
@@ -420,6 +424,42 @@
 									</Collection>
 								</PropertyValue>
 							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+
+			<Annotations Target="Metadata.PersonType">
+				<Annotation Term="Communication.Contact">
+					<Record Type="Communication.ContactType">
+						<PropertyValue Property="fn" Path="FormattedName"/>
+						<PropertyValue Property="tel">
+							<Collection>
+								<Record Type="Communication.PhoneNumberType">
+									<PropertyValue Property="type" EnumMember="Communication.PhoneType/cell"/>
+									<PropertyValue Property="uri" Path="MobilePhoneNumber"/>
+								</Record>
+								<Record Type="Communication.PhoneNumberType">
+									<PropertyValue Property="type" EnumMember="Communication.PhoneType/work"/>
+									<PropertyValue Property="uri" Path="PhoneNumber"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="email">
+							<Collection>
+								<Record Type="Communication.EmailAddressType">
+									<PropertyValue Property="address" Path="EmailAddress"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="role" Path="EmailAddress"/>
+						<PropertyValue Property="url">
+							<Collection>
+								<Record Type="Communication.UrlType">
+									<PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+									<PropertyValue Property="uri" Path="Url"/>
+								</Record>
+							</Collection>
 						</PropertyValue>
 					</Record>
 				</Annotation>
