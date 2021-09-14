@@ -2,10 +2,17 @@ jQuery.sap.require("sap/ui/generic/app/util/MessageUtil");
 var MessageUtil = sap.ui.require("sap/ui/generic/app/util/MessageUtil");
 
 sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
-	onInit: function () {
-		
+	
+	_oCtx: null,
+
+	onInit: function () {	
+		this.extensionAPI.attachPageDataLoaded(this.attachPageDataLoaded.bind(this));
 	},
 
+	attachPageDataLoaded: function(oCtxWrapper){
+		this._oCtx = oCtxWrapper.context;
+	},
+	
 	getResourceBundle: function () {
 		return this.getOwnerComponent().getModel("@i18n").getResourceBundle();
 	},
