@@ -248,6 +248,15 @@
 									}
 					 			}
 							}
+						},
+						"pages": {
+							"ObjectPage|FileSet": {
+								"entitySet": "FileSet",
+								"navigationProperty": "to_Files",
+								"component": {
+									"name": "sap.suite.ui.generic.template.ObjectPage"
+								}
+							}
 						}
 					}
 				}
