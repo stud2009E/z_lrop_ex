@@ -4,12 +4,23 @@ jQuery.sap.require("sap/ui/core/Fragment");
 var MessageUtil = sap.ui.require("sap/ui/generic/app/util/MessageUtil");
 var Fragment = sap.ui.require("sap/ui/core/Fragment");
 
+"use strict";
+
 sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 	
 	_oCtx: null,
 
 	onInit: function () {	
 		this.extensionAPI.attachPageDataLoaded(this.attachPageDataLoaded.bind(this));
+
+		this._setupUI();
+
+	},
+
+	_setupUI: function(){
+		var oObjectPageLayout = this.byId("objectPage");
+
+		// oObjectPageLayout.setUseIconTabBar(true);
 	},
 
 	attachPageDataLoaded: function(oCtxWrapper){
