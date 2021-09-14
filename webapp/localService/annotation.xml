@@ -459,6 +459,35 @@
 					</Collection>
 				</Annotation>
 
+				<Annotation Term="UI.Facets" >
+					<Collection>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="ID" String="fieldsFromHeader"/>
+							<PropertyValue Property="Label" String="{@i18n>fieldsFromHeader}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#fieldsFromHeader"/>
+						</Record>
+					</Collection>
+				</Annotation>
+
+				<Annotation Term="UI.FieldGroup" Qualifier="fieldsFromHeader">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Label" String="{@i18n>fieldsFromHeader}"/>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Header/Date"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Header/Progress"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Header/String"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+
 				<Annotation Term="UI.FieldGroup" Qualifier="dateTime">
 					<Record Type="UI.FieldGroupType">
 						<PropertyValue Property="Data">

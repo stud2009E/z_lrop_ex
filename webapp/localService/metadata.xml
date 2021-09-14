@@ -43,6 +43,10 @@
             <Property Name="MimeType" Type="Edm.String" MaxLength="40" Nullable="false" sap:label="MimeType"/>
             <Property Name="Date" Type="Edm.DateTime"  Nullable="false" sap:display-format="Date" sap:label="Date"/>
             <Property Name="Time" Type="Edm.Time"  Nullable="false" sap:label="Time"/>
+            <NavigationProperty Name="to_Header" 
+               Relationship="Z_LROP_EX_SRV.assoc_FileHeader" 
+               FromRole="FromRole_FileHeader" 
+               ToRole="ToRole_FileHeader"/>
          </EntityType> 
 
          <EntityType Name="TechType" sap:label="technical props">
@@ -87,6 +91,19 @@
             </ReferentialConstraint>
          </Association>
 
+         <Association Name="assoc_FileHeader" sap:content-version="1">
+            <End Type="Z_LROP_EX_SRV.FileType" Multiplicity="1" Role="FromRole_FileHeader"/>
+            <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="ToRole_FileHeader"/>
+            <ReferentialConstraint>
+               <Principal Role="FromRole_FileHeader">
+                  <PropertyRef Name="Guid"/>
+               </Principal>
+               <Dependent Role="ToRole_FileHeader">
+                  <PropertyRef Name="Guid"/>
+               </Dependent>
+            </ReferentialConstraint>
+         </Association>
+
          <Association Name="assoc_DataTech" sap:content-version="1">
             <End Type="Z_LROP_EX_SRV.HeaderType" Multiplicity="1" Role="FromRole_DataTech"/>
             <End Type="Z_LROP_EX_SRV.TechType" Multiplicity="0..1" Role="ToRole_DataTech"/>
@@ -123,6 +140,12 @@
                sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                <End EntitySet="HeaderSet" Role="FromRole_DataTech"/>
                <End EntitySet="TechSet" Role="ToRole_DataTech"/>
+            </AssociationSet>
+
+            <AssociationSet Name="set_assoc_FileHeader" Association="Z_LROP_EX_SRV.assoc_FileHeader" 
+               sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+               <End EntitySet="FileSet" Role="FromRole_FileHeader"/>
+               <End EntitySet="HeaderSet" Role="ToRole_FileHeader"/>
             </AssociationSet>
 
          </EntityContainer>
