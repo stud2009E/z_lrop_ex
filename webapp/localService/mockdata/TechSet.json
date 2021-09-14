@@ -5,7 +5,7 @@
 		"HasChange": false,
 		"HasReplace": false,
 		"HideOtherData": false,
-		"UploadHidden": false,
+		"HideFilesFacet": false,
 		"FileDeleteVisible": true,
 		"Field_fc": 0
 	},
@@ -15,7 +15,7 @@
 		"HasChange": true,
 		"HasReplace": false,
 		"HideOtherData": false,
-		"UploadHidden": true,
+		"HideFilesFacet": false,
 		"FileDeleteVisible": false,
 		"Field_fc": 1
 	},
@@ -25,7 +25,7 @@
 		"HasChange": false,
 		"HasReplace": true,
 		"HideOtherData": true,
-		"UploadHidden": true,
+		"HideFilesFacet": true,
 		"FileDeleteVisible": true,
 		"Field_fc": 3
 	},
@@ -35,7 +35,7 @@
 		"HasChange": false,
 		"HasReplace": true,
 		"HideOtherData": true,
-		"UploadHidden": true,
+		"HideFilesFacet": true,
 		"FileDeleteVisible": true,
 		"Field_fc": 7
 	}

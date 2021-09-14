@@ -1,8 +1,10 @@
 jQuery.sap.require("sap/ui/generic/app/util/MessageUtil");
 jQuery.sap.require("sap/ui/core/Fragment");
+jQuery.sap.require("sap/ui/table/VisibleRowCountMode");
 
 var MessageUtil = sap.ui.require("sap/ui/generic/app/util/MessageUtil");
 var Fragment = sap.ui.require("sap/ui/core/Fragment");
+var VisibleRowCountMode = sap.ui.require("sap/ui/table/VisibleRowCountMode");
 
 "use strict";
 
@@ -14,13 +16,27 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 		this.extensionAPI.attachPageDataLoaded(this.attachPageDataLoaded.bind(this));
 
 		this._setupUI();
-
 	},
 
 	_setupUI: function(){
 		var oObjectPageLayout = this.byId("objectPage");
-
 		// oObjectPageLayout.setUseIconTabBar(true);
+
+		var oSmartFileTable = this.byId("fileOP::Table");
+		if(oSmartFileTable){
+
+			function setupTable(){
+				var oTable = oSmartFileTable.getTable();
+				oTable.setVisibleRowCountMode(VisibleRowCountMode.Fixed);
+			}
+
+			if(oSmartFileTable.isInitialised()){
+				setupTable()
+			}else{
+				oSmartFileTable.attachInitialise(setupTable);
+			}
+			
+		}
 	},
 
 	attachPageDataLoaded: function(oCtxWrapper){
@@ -29,6 +45,25 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 	
 	onRebindFileTable: function(oEvent){
 		this.extensionAPI.rebind("fileOP::Table");
+	},
+
+	onBeforeRebindTableExtension: function(oEvent){
+		var oBindingParams = oEvent.getParameter("bindingParams");
+		var oSmartTable = oEvent.getSource();
+
+		if(oSmartTable.getEntitySet() === "FileSet"){
+			oBindingParams.events.dataReceived = function(oEvent){
+				var oTable = oSmartTable.getTable();
+				var oData = oEvent.getParameter("data");
+				var iCount = (oData.results || []).length;
+				
+				if(iCount > 5){
+					iCount = 5;
+				}
+
+				oTable.setVisibleRowCount(iCount || 1);
+			};
+		}
 	},
 
 	onShowCustomDialog: function(oEvent){
