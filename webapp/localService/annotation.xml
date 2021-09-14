@@ -219,7 +219,12 @@
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#replaceFacetFG"/>
 							<PropertyValue Property="ID" String="replaceFacetFG"/>
-							<PropertyValue Property="Label" String="{@i18n>labelExampleFacet}"/>
+							<PropertyValue Property="Label" String="{@i18n>labelReplaceFacetFG}"/>
+						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="ID" String="fileOP"/>
+							<PropertyValue Property="Label" String="{@i18n>fileOPFacet}"/>
+							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem"/>
 						</Record>
 						<Record Type="UI.ReferenceFacet">
 							<PropertyValue Property="Label" String="{@i18n>technical}"/>
@@ -277,11 +282,6 @@
 									</Record>
 								</Collection>
 							</PropertyValue>
-						</Record>
-						<Record Type="UI.ReferenceFacet">
-							<PropertyValue Property="ID" String="fileOP"/>
-							<PropertyValue Property="Label" String="{@i18n>fileOPFacet}"/>
-							<PropertyValue Property="Target" AnnotationPath="to_Files/@UI.LineItem"/>
 						</Record>
 					</Collection>
 				</Annotation>

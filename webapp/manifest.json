@@ -129,8 +129,8 @@
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
 						"ReplaceFacet|HeaderSet|replaceFacetFG": {
 							"type": "XML",
-							"className": "sap.ui.core.mvc.View",
-							"viewName": "z.lrop.ex.ext.view.Example"
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceFacetFG"
 						}
 					}
 				},

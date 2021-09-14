@@ -1,0 +1,15 @@
+<core:FragmentDefinition 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+
+	<Dialog title="{@i18n>cutomDialogTitle} {Guid}"
+		class="sapUiContentPadding">
+		
+		<Title text="{String}" />
+
+		<buttons>
+			<Button text="Close" press="onCloseDialog"/>
+		</buttons>
+	</Dialog>
+
+</core:FragmentDefinition>

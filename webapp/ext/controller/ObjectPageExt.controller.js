@@ -1,5 +1,8 @@
 jQuery.sap.require("sap/ui/generic/app/util/MessageUtil");
+jQuery.sap.require("sap/ui/core/Fragment");
+
 var MessageUtil = sap.ui.require("sap/ui/generic/app/util/MessageUtil");
+var Fragment = sap.ui.require("sap/ui/core/Fragment");
 
 sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 	
@@ -13,6 +16,40 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 		this._oCtx = oCtxWrapper.context;
 	},
 	
+	onRebindFileTable: function(oEvent){
+		this.extensionAPI.rebind("fileOP::Table");
+	},
+
+	onShowCustomDialog: function(oEvent){
+		var oExtAPI = this.extensionAPI;
+		var oView = this.getView();
+
+		oView.setBusy(true);
+		Fragment.load({
+			name: "z.lrop.ex.ext.fragment.CustomDialog",
+			controller: this
+		}).then(function(oDialog){
+
+			oExtAPI.attachToView(oDialog);
+
+			oDialog.attachAfterClose(function(){
+				oDialog.destroy();
+				oDialog = null;
+			});
+
+			oDialog.open();
+
+		}).finally(function(){
+			oView.setBusy(false);
+		});
+
+	},
+
+	onCloseDialog: function(oEvent){
+		var oDialog = oEvent.getSource().getParent();
+		oDialog.close();
+	},
+
 	getResourceBundle: function () {
 		return this.getOwnerComponent().getModel("@i18n").getResourceBundle();
 	},

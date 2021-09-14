@@ -1,0 +1,15 @@
+<core:FragmentDefinition 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+
+
+		<Button text="rebind files"
+			press="onRebindFileTable"/>
+
+
+		<Button text="open dialog"
+			press="onShowCustomDialog"/>
+	
+
+</core:FragmentDefinition>
+
