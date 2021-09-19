@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+
+    	<RatingIndicator 
+			value="{= ${Int16} > 400 ? 1:5}"/>
+		
+		<Button text="Press"/>
+</core:FragmentDefinition>

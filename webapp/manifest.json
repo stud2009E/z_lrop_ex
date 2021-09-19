@@ -207,6 +207,16 @@
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "z.lrop.ex.ext.fragment.ListReportGridTableColumns",
 							"type": "XML"
+						},
+						"ResponsiveTableColumnsExtension|HeaderSet|header":{
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.ListReportRespTableColumns",
+							"type": "XML"
+						},
+						"ResponsiveTableCellsExtension|HeaderSet|header": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.ListReportRespTableCells",
+							"type": "XML"
 						}
 					}
 				},
