@@ -52,15 +52,16 @@
 					templateShareable: true
 				}">
 				<mc:lines>
+				
 					<mc:LineMicroChartLine
-							points="{
+						points="{
 							path: 'lines>points',
 							templateShareable: true
 						}"
-							color="{lines>color}"
-							showPoints="{lines>showPoints}"
-							type="{lines>type}"
-							>
+						color="{lines>color}"
+						showPoints="{lines>showPoints}"
+						type="{lines>type}">
+
 						<mc:LineMicroChartPoint x="{lines>x}" y="{lines>y}"/>
 					</mc:LineMicroChartLine>
 				</mc:lines>
