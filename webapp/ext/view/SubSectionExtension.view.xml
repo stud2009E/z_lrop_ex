@@ -1,0 +1,28 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns="sap.suite.ui.commons"
+	controllerName="z.lrop.ex.ext.controller.SubSectionExtension">
+
+	<Timeline
+		id="idTimeline"
+		enableDoubleSided="true"
+		groupBy="HireDate"
+		filterTitle="Job Title"
+		content="{time>/Employees}"
+		axisOrientation="Horizontal">
+		<content>
+			<TimelineItem
+				id="idTemplateItem"
+				dateTime="{time>HireDate}"
+				title="{time>JobTitle}"
+				userNameClickable="true"
+				text="{time>JobResponsibilities}"
+				userName="{time>Name}"
+				filterValue="{time>JobTitle}"
+				icon="{time>Icon}">
+			</TimelineItem>
+		</content>
+	</Timeline>
+
+</core:View>

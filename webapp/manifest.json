@@ -186,6 +186,15 @@
 							"fragmentName": "z.lrop.ex.ext.fragment.HeaderFacet",
 							"type": "XML",
 							"equalSplit": false
+						},
+						"BeforeSubSection|HeaderSet|numbers":{
+							"className": "sap.ui.core.mvc.View",
+							"viewName": "z.lrop.ex.ext.view.SubSectionExtension",
+							"type": "XML",
+							"sap.ui.generic.app": {
+								"title": "{{timeline}}",
+								"enableLazyLoading": false
+							}
 						}
 					}
 				},
