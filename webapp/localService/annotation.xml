@@ -296,6 +296,20 @@
 					<Record Type="UI.FieldGroupType">
 						<PropertyValue Property="Data">
 						<!-- exmaple facet for replace -->
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Person/City"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Person/Country"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Person/Street"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="to_Person/MobilePhoneNumber"/>
+								</Record>
+							</Collection>
 						</PropertyValue>
 					</Record>
 				</Annotation>

@@ -162,10 +162,14 @@
 			"extensions": {
 				"sap.ui.viewExtensions": {
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
-						"ReplaceFacet|HeaderSet|replaceFacetFG": {
+						"BeforeFacet|HeaderSet|replaceFacetFG": {
 							"type": "XML",
 							"className": "sap.ui.core.Fragment",
-							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceFacetFG"
+							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceFacetFG",
+							"sap.ui.generic.app": {
+								"title": "{{labelReplaceFacetFG}} + ext",
+								"key" : "replace-fg"
+							}
 						},
 						"BeforeHeaderFacet|HeaderSet|headerEditable::com.sap.vocabularies.UI.v1.FieldGroup::otherData":{
 							"className": "sap.ui.core.Fragment",
