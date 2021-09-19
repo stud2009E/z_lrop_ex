@@ -131,6 +131,11 @@
 							"type": "XML",
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceFacetFG"
+						},
+						"BeforeHeaderFacet|HeaderSet|headerEditable::com.sap.vocabularies.UI.v1.FieldGroup::otherData":{
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.HeaderFacet",
+							"type": "XML"
 						}
 					}
 				},
