@@ -141,11 +141,6 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 		}
 		
 		MessageUtil.handleTransientMessages(getMessageDialogForView.bind(null, oView));
-	},
-
-
-	setLoaclModel: function(){
-
 	}
 
 });

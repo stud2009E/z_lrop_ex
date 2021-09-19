@@ -68,7 +68,21 @@ sap.ui.controller("z.lrop.ex.ext.controller.ListReportExt", {
 		}
 
 		return false;
+	},
 
+	
+	onGlobalActionPress: console.log,
+
+	onHeaderActionLRPress: function(oEvent){
+		var aCtxs = this.extensionAPI.getSelectedContexts();
+
+		console.table(aCtxs.map(ctx => ctx.getObject()));
+	},
+
+	onHeaderDeterminigLRActionPress: function(oEvent){
+		var aCtxs = this.extensionAPI.getSelectedContexts();
+
+		console.table(aCtxs.map(ctx => ctx.getObject()));
 	}
 
 });

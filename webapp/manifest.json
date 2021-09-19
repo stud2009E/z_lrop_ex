@@ -222,7 +222,38 @@
 				},
 				"sap.ui.controllerExtensions": {
 					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
-						"controllerName": "z.lrop.ex.ext.controller.ListReportExt"
+						"controllerName": "z.lrop.ex.ext.controller.ListReportExt",
+          				"sap.ui.generic.app": {
+							"HeaderSet": {
+								"EntitySet": "HeaderSet",
+								"Actions": {
+									"globalAction":{
+										"id" : "globalAction",
+										"text" : "{{globalActionLR}}",
+										"press" : "onGlobalActionPress",
+										"global": true
+									},
+									"headerDeterminingLRAction":{
+										"id" : "headerDeterminingLRAction",
+										"text" : "{{headerDeterminingActionLR}}",
+										"press" : "onHeaderDeterminigLRActionPress",
+										"global": false,
+										"requiresSelection": true,
+										"determining": true
+									},
+									"headerLRAction":{
+										"id" : "headerLRAction",
+										"text" : "{{headerActionLR}}",
+										"press" : "onHeaderActionLRPress",
+										"applicablePath": "Boolean",
+										"global": false,
+										"determining": false,
+										"requiresSelection": true
+									}
+
+								}
+							}
+						}
 					},
 					"sap.suite.ui.generic.template.ObjectPage.view.Details": {
 						"controllerName": "z.lrop.ex.ext.controller.ObjectPageExt",
