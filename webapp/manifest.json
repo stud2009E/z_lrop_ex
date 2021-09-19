@@ -121,6 +121,41 @@
 					"defaultCountMode": "Inline",
 					"refreshAfterChange": false
 				}
+			},
+			"lines": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings":{
+					"description": "2 lines, threshold line, labels shown",
+					"threshold": 50,
+					"leftTopLabel": "120 M",
+					"rightTopLabel": "140 M",
+					"leftBottomLabel": "Sept 2016",
+					"rightBottomLabel": "Oct 2016",
+					"showPoints": true,
+					"size": "L",
+					"lines": [
+						{
+							"points": [
+								{"x": 0, "y": 50},
+								{"x": 8, "y": 68},
+								{"x": 20, "y": 25},
+								{"x": 30, "y": 45},
+								{"x": 40, "y": 67},
+								{"x": 100, "y": 88}
+							]
+						},
+						{
+							"points": [
+								{"x": 2, "y": 55},
+								{"x": 8, "y": 40},
+								{"x": 15, "y": 20},
+								{"x": 30, "y": 75},
+								{"x": 40, "y": 30},
+								{"x": 100, "y": 50}
+							]
+						}
+					]
+				}
 			}
 		},
 		"extends": {
@@ -135,6 +170,11 @@
 						"BeforeHeaderFacet|HeaderSet|headerEditable::com.sap.vocabularies.UI.v1.FieldGroup::otherData":{
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "z.lrop.ex.ext.fragment.HeaderFacet",
+							"type": "XML"
+						},
+						"ReplaceHeaderExtensionFacet|HeaderSet":{
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceAllHeaderFacet",
 							"type": "XML"
 						}
 					}

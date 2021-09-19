@@ -35,8 +35,14 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 			}else{
 				oSmartFileTable.attachInitialise(setupTable);
 			}
-			
 		}
+		var oLineModel = this.getOwnerComponent().getModel("lines");
+		var oMicroChart = this.byId("microChart");
+		oMicroChart.setModel(oLineModel, "lines");
+		oMicroChart.bindElement({
+			model:"lines",
+			path: "/"
+		});
 	},
 
 	attachPageDataLoaded: function(oCtxWrapper){
@@ -132,6 +138,11 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 		}
 		
 		MessageUtil.handleTransientMessages(getMessageDialogForView.bind(null, oView));
+	},
+
+
+	setLoaclModel: function(){
+
 	}
 
 });
