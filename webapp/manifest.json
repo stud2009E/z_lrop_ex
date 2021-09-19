@@ -347,6 +347,12 @@
 								}
 							}
 						}
+					},
+					"ObjectPage|FileSet":{
+						"entitySet": "FileSet",
+						"component": {
+							"name":"sap.suite.ui.generic.template.ObjectPage"
+						}
 					}
 				}
 			}

@@ -29,6 +29,46 @@ sap.ui.controller("z.lrop.ex.ext.controller.ListReportExt", {
 
 	onBeforeRebindTableExtension: function(oEvent){
 		
+	},
+
+	
+	onListNavigationExtension: function(oEvent){
+		var oSource = oEvent.getSource();
+		var oBindingContext = oSource.getBindingContext();
+		var oObject = oBindingContext.getObject();
+		var oExtAPI = this.extensionAPI;
+		var oNavigationController = oExtAPI.getNavigationController();
+		var oModel = oBindingContext.getModel();
+
+
+		if(oObject.Boolean){
+			var sPath = oModel.createKey("/FileSet", {
+				FileId: "001",
+				Guid: oObject.Guid
+			});
+			var fnNavigate = function(){
+				return new Promise(function(fnResolve){
+					oModel.createBindingContext(sPath, null, {}, function(oTarget){
+						oNavigationController.navigateInternal(oTarget);
+						fnResolve();
+					});
+				});
+			};
+
+			oExtAPI.securedExecution(fnNavigate, {
+				busy: {
+					check: false
+				},
+				dataloss: {
+					popup: false
+				}
+			});
+
+			return true;
+		}
+
+		return false;
+
 	}
 
 });
