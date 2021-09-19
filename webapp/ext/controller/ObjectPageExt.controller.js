@@ -100,6 +100,18 @@ sap.ui.controller("z.lrop.ex.ext.controller.ObjectPageExt", {
 
 	},
 
+	onHeaderOPActionPress: function(oEvent){
+		this.extensionAPI.refresh();	
+	},
+	
+	onFileOPActionPress: function(oEvent){
+		this.extensionAPI.refresh();	
+	},
+
+	onSectionActionOPPress:function(oEvent){
+		this.extensionAPI.rebind("fileOP::Table");
+	},
+
 	onCloseDialog: function(oEvent){
 		var oDialog = oEvent.getSource().getParent();
 		oDialog.close();

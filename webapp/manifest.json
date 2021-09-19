@@ -245,12 +245,10 @@
 										"id" : "headerLRAction",
 										"text" : "{{headerActionLR}}",
 										"press" : "onHeaderActionLRPress",
-										"applicablePath": "Boolean",
 										"global": false,
 										"determining": false,
 										"requiresSelection": true
 									}
-
 								}
 							}
 						}
@@ -261,7 +259,40 @@
 							"HeaderSet": {
 								"EntitySet": "HeaderSet",
 								"Header": {
-									"Actions": {}
+									"Actions": {
+										"headerOPAction":{
+											"id":"headerOPAction",
+											"text": "{{headerOPAction}}",
+											"press": "onHeaderOPActionPress",
+											"applicablePath": "Boolean",
+											"determining": false
+										}
+									}
+								},
+								"Sections": {
+									"to_Files::com.sap.vocabularies.UI.v1.LineItem": {
+										"id": "fileOP",
+										"Actions": {
+											"sectionActionOP": {
+												"id": "sectionActionOP",
+												"text": "{{sectionActionOP}}",
+												"press": "onSectionActionOPPress"
+											}
+										}
+									}
+								}
+							},
+							"FileSet": {
+								"EntitySet": "FileSet",
+								"Header": {
+									"Actions": {
+										"headerOPAction":{
+											"id":"fileOPAction",
+											"text": "{{fileOPAction}}",
+											"press": "onFileOPActionPress",
+											"determining": false
+										}
+									}
 								}
 							}
 						}
@@ -335,7 +366,7 @@
 							"settings": {
 								"editableHeaderContent": false,
 								"simpleHeaderFacets": false,
-								"showRelatedApps": true,
+								"showRelatedApps": false,
 								"sections": {
 									"fileOP":{
 										"quickVariantSelection": {
