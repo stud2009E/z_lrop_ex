@@ -1,3 +1,9 @@
+$.sap.require("sap/ui/model/Filter");
+$.sap.require("sap/ui/model/FilterOperator");
+
+var Filter = sap.ui.require("sap/ui/model/Filter");
+var FilterOperator = sap.ui.require("sap/ui/model/FilterOperator");
+
 sap.ui.controller("z.lrop.ex.ext.controller.ListReportExt", {
 	onInit: function(){
 
@@ -28,7 +34,24 @@ sap.ui.controller("z.lrop.ex.ext.controller.ListReportExt", {
 	},
 
 	onBeforeRebindTableExtension: function(oEvent){
-		
+		var oSmartTable = oEvent.getSource();
+		var oBindingParams = oEvent.getParameter("bindingParams");
+
+		if(oSmartTable.getEntitySet() === "HeaderSet"){
+			var oSmartFilterBar = this.byId("listReportFilter");
+			var oRating = oSmartFilterBar.getControlByKey("ratingFilter");
+			var fValue = oRating.getValue();
+
+			if(fValue){
+				oBindingParams.filters.push(
+					new Filter({
+						path: "Criticality",
+						value1: fValue,
+						operator: FilterOperator.EQ
+					})
+				);
+			}
+		}
 	},
 
 	
