@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+	xmlns:table="sap.ui.table"
+	xmlns="sap.m">
+	<table:Column width="10rem">
+		<Label text="Rating"/>
+		<table:customData>
+			<core:CustomData key="p13nData"
+				value='\{"columnKey": "Rating", "leadingProperty":"Int16", "columnIndex" : "100"}' />
+		</table:customData>
+		<table:template>
+			<RatingIndicator value="{= ${Int16} > 400 ? 1:5}"></RatingIndicator>
+		</table:template>
+	</table:Column>
+	<table:Column width="10rem">
+		<Label text="Press"/>
+		<table:customData>
+			<core:CustomData key="p13nData" value='\{"columnKey": "Test", "columnIndex" : "99"}' />
+		</table:customData>
+		<table:template>
+			<Button text="Press"/>
+		</table:template>
+	</table:Column>
+</core:FragmentDefinition>

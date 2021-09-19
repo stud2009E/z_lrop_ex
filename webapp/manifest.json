@@ -201,6 +201,13 @@
 							"fragmentName": "z.lrop.ex.ext.fragment.FormExtension",
 							"type": "XML"
 						}
+					},
+					"sap.suite.ui.generic.template.ListReport.view.ListReport":{
+						"GridTableColumnsExtension|HeaderSet|header":{
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.ListReportGridTableColumns",
+							"type": "XML"
+						}
 					}
 				},
 				"sap.ui.controllerExtensions": {
