@@ -172,7 +172,7 @@
 							"fragmentName": "z.lrop.ex.ext.fragment.HeaderFacet",
 							"type": "XML"
 						},
-						"ReplaceHeaderExtensionFacet|HeaderSet":{
+						"_ReplaceHeaderExtensionFacet|HeaderSet":{
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "z.lrop.ex.ext.fragment.ReplaceAllHeaderFacet",
 							"type": "XML"
