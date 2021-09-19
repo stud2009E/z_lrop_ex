@@ -1,0 +1,16 @@
+<core:FragmentDefinition 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:smf="sap.ui.comp.smartfield"
+	xmlns:smfo="sap.ui.comp.smartform">
+
+	<smfo:GroupElement>
+		<smf:SmartField value="{Status}"/>
+	</smfo:GroupElement>
+
+	<smfo:GroupElement>
+		<smf:SmartField value="{Byte}"/>
+	</smfo:GroupElement>
+
+</core:FragmentDefinition>
+

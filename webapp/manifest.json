@@ -195,6 +195,11 @@
 								"title": "{{timeline}}",
 								"enableLazyLoading": false
 							}
+						},
+						"SmartFormExtension|HeaderSet|com.sap.vocabularies.UI.v1.FieldGroup::texts": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "z.lrop.ex.ext.fragment.FormExtension",
+							"type": "XML"
 						}
 					}
 				},
