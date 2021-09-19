@@ -58,6 +58,11 @@
 		]
 	},
 	"sap.ui5": {
+		"componentUsages": {
+			"reuseComponentEx": {
+				"name": "z.lrop.ex.reuse"
+			}
+		},
 		"resources": {
 			"js": [],
 			"css": [
@@ -402,6 +407,17 @@
 					 			}
 							}
 						},
+						"embeddedComponents": {        
+							"UploadComponent": {         
+								"id": "z.lrop.ex.reuse",        
+								"componentUsage": "reuseComponentEx",   
+								"title": "{{reuseComponentEx}}",
+								"settings": {
+									"navProperty": "to_Files",
+									"hidden": "{Boolean}"
+								}
+							}                 
+						},  
 						"pages": {
 							"ObjectPage|FileSet": {
 								"entitySet": "FileSet",

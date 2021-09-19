@@ -1,0 +1,9 @@
+<core:View 
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:u="sap.m.upload">
+
+	<u:UploadSet id="fileUploadSet">
+	</u:UploadSet>
+
+</core:View>
